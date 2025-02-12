@@ -247,32 +247,33 @@ const TaxCalculator = () => {
     switch (activeTab) {
       case 0:
         return (
-          <div className="space-y-4">
-            <label className="block">
-              <span className="text-gray-700">Financial Year</span>
-              <select
-                className="mt-1 block lg:h-10 w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200"
-                value={formData.financialYear}
-                onChange={(e) => setFormData((prev) => ({ ...prev, financialYear: e.target.value }))}
-              >
-                <option>FY 2025-2026</option>
-                <option>FY 2024-2025</option>
-              </select>
-            </label>
-
-            <label className="block">
-              <span className="text-gray-700">Age Group</span>
-              <select
-                className="mt-1 block  lg:h-10 w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-200"
-                value={formData.ageGroup}
-                onChange={(e) => setFormData((prev) => ({ ...prev, ageGroup: e.target.value }))}
-              >
-                <option>0-60</option>
-                <option>60-80</option>
-                <option>80+</option>
-              </select>
-            </label>
-          </div>
+          <div className="space-y-6">
+          <label className="block">
+            <span className="text-lg font-semibold text-gray-800">Financial Year</span>
+            <select
+              className="mt-2 block w-full h-12 rounded-lg border border-gray-300 bg-white px-4 text-gray-700 shadow-sm focus:border-purple-600 focus:ring-2 focus:ring-purple-300 transition-all"
+              value={formData.financialYear}
+              onChange={(e) => setFormData((prev) => ({ ...prev, financialYear: e.target.value }))}
+            >
+              <option>FY 2025-2026</option>
+              <option>FY 2024-2025</option>
+            </select>
+          </label>
+        
+          <label className="block">
+            <span className="text-lg font-semibold text-gray-800">Age Group</span>
+            <select
+              className="mt-2 block w-full h-12 rounded-lg border border-gray-300 bg-white px-4 text-gray-700 shadow-sm focus:border-purple-600 focus:ring-2 focus:ring-purple-300 transition-all"
+              value={formData.ageGroup}
+              onChange={(e) => setFormData((prev) => ({ ...prev, ageGroup: e.target.value }))}
+            >
+              <option>0-60</option>
+              <option>60-80</option>
+              <option>80+</option>
+            </select>
+          </label>
+        </div>
+        
         )
       case 1:
         return (
@@ -345,7 +346,7 @@ const TaxCalculator = () => {
         <button
         className={`px-6 py-2 text-lg font-medium transition-colors duration-300 ease-in-out transform rounded-3xl ${
           selectedRegime === "new" 
-            ? "bg-purple-600 text-white border-b-2 border-purple-600"
+            ? "bg-purple-600 text-white border-b-1 border-purple-600"
             : "bg-gray-100 text-gray-600 hover:bg-gray-200"
         }`}
         onClick={() => setSelectedRegime("new")}
@@ -391,7 +392,7 @@ const TaxCalculator = () => {
         <div className="flex justify-between p-6 border-t">
           {activeTab > 0 && (
             <button
-              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
+              className="px-16 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
               onClick={() => setActiveTab((prev) => prev - 1)}
             >
               Back
@@ -399,14 +400,14 @@ const TaxCalculator = () => {
           )}
           {activeTab < tabs.length - 1 ? (
             <button
-              className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
+              className="px-14 py-2.5 bg-purple-500 text-white rounded-md hover:bg-purple-700 transition-colors"
               onClick={() => setActiveTab((prev) => prev + 1)}
             >
               Continue
             </button>
           ) : (
             <button
-              className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
+              className="px-14 py-2.5 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
               onClick={handleCalculate}
             >
               Calculate

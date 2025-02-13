@@ -166,7 +166,7 @@ const calculateTax = (taxableIncome) => {
     setTaxResults({
       totalIncome,
       exemptAllowances: Number(formData.incomeDetails.exemptAllowances),
-      standardDeduction: 50000,
+      standardDeduction: 75000,
       chapterVIA: selectedRegime === "new" ? 0 : totalDeductions - 50000,
       taxableIncome,
       taxPayable: incomeTax + healthEducationCess,

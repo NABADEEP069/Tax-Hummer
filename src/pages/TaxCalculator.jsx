@@ -26,7 +26,7 @@ function TaxCalculator() {
         <p className="text-sm sm:text-md md:text-lg text-gray-600 font-medium">
           <Link to="/" className="text-gray-900">HOME</Link>
           <span className="mx-1">&gt;</span>
-          <Link to="/taxcalculators" className="text-gray-900">CALCULATORS</Link>
+          <Link to="/taxcalculator" className="text-gray-900">CALCULATORS</Link>
           <span className="mx-1">&gt;</span>
           <span className="text-gray-900">INCOME TAX CALCULATOR - FY 2025-2026</span>
         </p>

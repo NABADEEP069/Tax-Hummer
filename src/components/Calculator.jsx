@@ -189,7 +189,7 @@ const calculateTax = (taxableIncome) => {
   }
   
 
-  const tabs = ["Basic Details", "Income Details", "Deductions"]
+  const tabs = ["Basic Details", "Income Details", "Deductions", ]
 
   const formatDeductionLabel = (key) => {
     // Handle special cases for different deduction types
@@ -342,7 +342,7 @@ const calculateTax = (taxableIncome) => {
       <div className="border-b pb-2">
         <div className="flex space-x-4">
         <button
-        className={`px-6 py-2 text-lg font-medium transition-colors duration-300 ease-in-out transform rounded-3xl ${
+        className={`px-6 py-2 text-lg font-medium transition-colors duration-300 ease-in-out transform rounded-xl ${
           selectedRegime === "new" 
             ? "bg-purple-600 text-white border-b-1 border-purple-600"
             : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -351,7 +351,7 @@ const calculateTax = (taxableIncome) => {
       >
         New regime
         {selectedRegime === "new" && (
-          <span className="ml-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Recommended</span>
+          <span className="ml-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-xs ">Recommended</span>
         )}
       </button>
 

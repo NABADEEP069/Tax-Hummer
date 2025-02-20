@@ -6,21 +6,22 @@ const ProductsForEveryone = () => {
   const navigate = useNavigate();
 
   const cards = [
-    { 
-      title: "Salary Individual(₹999)", 
-      baseDescription: "For salaried individuals with straightforward income sources", 
-      fullDescription: "This plan is for salaried individuals with straightforward income sources such as salary, bank interest, and savings. It simplifies tax filing for employees by considering deductions under various sections like 80C, 80D, and standard deductions.",
-      mobileDescription: "For salaried individuals with basic income sources. Includes standard deductions and basic tax filing.",
-      illustration: "627.jpg",
-      hoverGradient: "bg-blue-400",
-      path: "/plans"
-    },
+     
+      {
+        title: "Salary Individual (₹999)",
+        baseDescription: "Ideal for salaried individuals with straightforward income sources.",
+        fullDescription: "Designed for salaried individuals with simple income sources like salary, bank interest, and savings. This plan streamlines tax filing by incorporating deductions under sections like 80C, 80D, and standard deductions.",
+        mobileDescription: "For salaried individuals with basic income sources, standard deductions, and simplified tax filing.",
+        illustration: "627.webp",
+        hoverGradient: "bg-blue-400",
+        path: "/plans"
+      },
     { 
       title: "Salary Individual Pro(₹1439)", 
       baseDescription: "Advanced plan for salaried individuals with multiple income sources",
       fullDescription: "A more advanced version of the Salary Individual plan, this option is for salaried individuals with additional income sources, such as rental income, business side income, or capital gains from investments. It offers a more detailed tax optimization strategy.",
       mobileDescription: "Advanced plan for multiple income sources, including rental and business income.",
-      illustration: "54740.jpg",
+      illustration: "54740.webp",
       hoverGradient: "bg-orange-400",
       path: "/plans"
     },
@@ -29,7 +30,7 @@ const ProductsForEveryone = () => {
       baseDescription: "Specialized plan for investment-based income",
       fullDescription: "Designed for individuals earning from the sale of stocks, mutual funds, real estate, or other capital assets, this plan helps in computing long-term and short-term capital gains, indexation benefits, and applicable exemptions under Income Tax laws.",
       mobileDescription: "For stock, mutual fund & real estate gains. Includes capital gains calculation.",
-      illustration: "5334521.jpg",
+      illustration: "5334521.webp",
       hoverGradient: "bg-green-400",
       path: "/plans"
     },
@@ -38,7 +39,7 @@ const ProductsForEveryone = () => {
       baseDescription: "Comprehensive plan for international income sources",
       fullDescription: "This plan is for individuals with foreign income, including NRIs, freelancers with international clients, or those receiving foreign dividends. It ensures DTAA compliance and helps claim foreign tax credits.",
       mobileDescription: "For NRIs & foreign income. Includes DTAA compliance & tax credits.",
-      illustration: "10075609.jpg",
+      illustration: "10075609.webp",
       hoverGradient: "bg-purple-400",
       path: "/plans"
     },
@@ -97,10 +98,14 @@ const ProductsForEveryone = () => {
 
       {/* Mobile Layout - Unchanged */}
       <div className="max-w-7xl mx-auto grid grid-cols-2 gap-3 mt-6 sm:hidden -my-10">
-        <h2 className="text-3xl font-extrabold col-span-2 text-purple-700">Plans Overview</h2>
-        <p className="text-gray-600 mt-1 col-span-2 text-xs">
-          Choose from our specialized tax filing plans for your needs.
-        </p>
+        <h2 className="text-3xl font-extrabold col-span-2 text-purple-500">Plans Overview</h2>
+        <p className="text-xs mt-1 col-span-2 bg-gradient-to-r from-purple-700 via-purple-500 to-purple-300 bg-clip-text text-transparent">
+  Choose from our specialized tax filing plans for your needs.
+</p>
+
+
+
+
         {cards.map((card, index) => (
           <div
             key={index}

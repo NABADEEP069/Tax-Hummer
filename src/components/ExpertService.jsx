@@ -14,16 +14,62 @@ const ExpertService = () => {
 
       <div className="w-full backdrop-blur-md shadow-xl rounded-3xl p-6 sm:p-8 md:p-12 border border-purple-300/40 text-center bg-white">
         {/* Header */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-700 mb-6 sm:mb-8 leading-tight">
-          <FaRegLightbulb className="inline-block text-pink-500 mr-3 font-[sans]" />
-          Looking for Expert Services?
-        </h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 leading-tight relative">
+  <FaRegLightbulb className="inline-block text-pink-500 mr-3 font-[sans] animate-pulse" />
+  <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">
+    Looking for <p></p>
+  </span>
+  <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent animate-glow">
+    Expert Services?
+  </span>
+</h2>
 
-        <p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed">
-          <strong className="text-purple-600">Fast, Easy & Hassle-Free!</strong> <br />
-          At <span className="text-purple-500 font-semibold font-[sans]">Tax Hummer</span>, we go 
-          <span className="text-gray-600"> beyond software</span> – our expert services ensure smooth and stress-free tax compliance.
-        </p>
+<style>
+{`
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+  50% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
+  100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
+}
+.animate-glow {
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+`}
+</style>
+
+
+<p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed">
+  <strong className="bg-gradient-to-r from-blue-500 via-cyan-400 to-green-400 bg-clip-text text-transparent animate-glow">
+    Fast, Easy & Hassle-Free!
+  </strong> 
+  <br />
+  At 
+  <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent font-semibold font-[sans] animate-glow">
+    Tax Hummer
+  </span>, we go 
+  <span className="bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300 bg-clip-text text-transparent">
+    beyond software
+  </span> – our expert services ensure smooth and  <p></p>
+  <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent font-semibold font-[sans] animate-glow">
+  stress-free tax compliance.
+  </span>
+</p>
+
+
+
+<style>
+{`
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
+  50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); }
+  100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
+}
+.animate-glow {
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+`}
+</style>
+
 
 
         {/* Services Grid */}

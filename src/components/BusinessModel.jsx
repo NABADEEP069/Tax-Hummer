@@ -4,14 +4,14 @@ import { MdOutlineDone } from 'react-icons/md';
 
 const plans = [
   {
-    title: 'Salary Individual',
+    title1: 'Salary Individual',
     price: '₹999',
     features: ['Link your PAN', 'Upload Form 16', 'File ITR'],
     icon: <FaUserTie className="text-purple-500 text-4xl" />,
     color: 'border-purple-500',
   },
   {
-    title: 'Salary Individual Pro',
+    title2: 'Salary Individual Pro',
     price: '₹1,439',
     features: [
       'Get Expert Assistance',
@@ -23,7 +23,7 @@ const plans = [
     color: 'border-pink-500',
   },
   {
-    title: 'Capital Gain Tax',
+    title3: 'Capital Gain Tax',
     price: '₹2,429',
     features: [
       'Capital from Stocks',
@@ -35,7 +35,7 @@ const plans = [
     color: 'border-green-500',
   },
   {
-    title: 'Foreign Tax',
+    title4: 'Foreign Tax',
     price: '₹3,419',
     features: [
       'Global Income',
@@ -82,8 +82,92 @@ const BusinessModel = () => {
             className={`min-w-[280px] bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105 border-t-4 ${plan.color}`}
           >
             <div className="flex justify-center mb-4">{plan.icon}</div>
-            <h3 className="text-2xl font-semibold text-gray-800 text-center">{plan.title}</h3>
-            <p className="text-3xl font-bold text-center text-purple-600 mt-2">{plan.price}</p>
+
+
+            <h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent animate-glow-gold">
+  {plan.title1}
+</h3>
+
+<style>
+{`
+@keyframes glow-gold {
+  0% { text-shadow: 0 0 5px rgba(255, 165, 0, 0.4); }
+  50% { text-shadow: 0 0 15px rgba(255, 165, 0, 1); }
+  100% { text-shadow: 0 0 5px rgba(255, 165, 0, 0.4); }
+}
+.animate-glow-gold {
+  animation: glow-gold 1.5s infinite alternate ease-in-out;
+}
+`}
+</style>
+
+
+
+
+<h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent animate-neon">
+  {plan.title2}
+</h3>
+
+<style>
+{`
+@keyframes neon {
+  0% { text-shadow: 0 0 5px rgba(0, 191, 255, 0.4); }
+  50% { text-shadow: 0 0 15px rgba(0, 191, 255, 1); }
+  100% { text-shadow: 0 0 5px rgba(0, 191, 255, 0.4); }
+}
+.animate-neon {
+  animation: neon 1.5s infinite alternate ease-in-out;
+}
+`}
+</style>
+
+
+
+
+<h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-red-500 to-violet-500 bg-clip-text text-transparent animate-glow-redviolet">
+  {plan.title3}
+</h3>
+
+<style>
+{`
+@keyframes glow-redviolet {
+  0% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); }
+  50% { text-shadow: 0 0 15px rgba(138, 43, 226, 1); }
+  100% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); }
+}
+.animate-glow-redviolet {
+  animation: glow-redviolet 1.5s infinite alternate ease-in-out;
+}
+`}
+</style>
+
+
+
+
+
+
+
+            <h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent animate-glow">
+  {plan.title4}
+</h3>
+
+<style>
+{`
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255, 105, 180, 0.4); }
+  50% { text-shadow: 0 0 15px rgba(255, 105, 180, 0.9); }
+  100% { text-shadow: 0 0 5px rgba(255, 105, 180, 0.4); }
+}
+.animate-glow {
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+`}
+</style>
+
+
+
+
+            <p className="text-2xl font-bold text-center text-gray-600 mt-2">{plan.price}</p>
             <p className="text-sm text-center text-gray-500 mb-4">One-Time Payment ✅</p>
 
             <ul className="space-y-2 text-gray-700">

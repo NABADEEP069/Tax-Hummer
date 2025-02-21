@@ -77,8 +77,10 @@ const WhyChooseUsAI = () => {
               <span className="font-semibold text-purple-800">
               AI-Powered Tax Compliance – 
               </span>{' '}
+              <span className="font-normal">
               Smart, Accurate, and Hassle-Free
               Keeping up with tax regulations can be overwhelming, but our AI-driven tax compliance system ensures that users stay ahead. From real-time tracking of tax laws to automated calculations and filing, Tax Hummer minimizes human errors and maximizes compliance efficiency. Whether it’s ITR, GST, or business taxation, our intelligent system guarantees precision and peace of mind.
+              </span>
             </p>
           </div>
         </div>

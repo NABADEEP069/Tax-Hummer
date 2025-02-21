@@ -143,6 +143,7 @@ const TaxApp = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 px-4 py-1.5 rounded-lg text-sm font-sans"
+                onClick={() => navigate("/plans")}
               >
                 Book Advisor
               </motion.button>

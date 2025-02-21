@@ -39,8 +39,10 @@ const WhyChooseUsUser = () => {
               <span className="font-semibold text-purple-800">
               User-Friendly & Secure – 
               </span>{' '}
+              <span className="font-normal">
               A Platform You Can Trust
               Security and ease of use are at the core of Tax Hummer. Built with state-of-the-art encryption technology, the platform ensures that user data remains confidential and protected. The intuitive interface is designed for effortless navigation, making tax filing and financial management accessible to everyone, from individuals to enterprises.
+              </span>
             </p>
           </div>
         </div>

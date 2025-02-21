@@ -12,70 +12,46 @@ const ExpertService = () => {
     <div className="relative py-16 sm:px-6 md:px-12 overflow-hidden">
       <AnimatedBackground />
 
-      <div className="w-full backdrop-blur-md shadow-xl rounded-3xl p-6 sm:p-8 md:p-12 border border-purple-300/40 text-center bg-white">
+      <div className="min-h-screen w-full  p-6 sm:p-8 md:p-12 text-center bg-[#f5f5f5]">
         {/* Header */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8 leading-tight relative">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal mb-6 sm:mb-8 leading-tight relative">
   <FaRegLightbulb className="inline-block text-pink-500 mr-3 font-[sans] animate-pulse" />
-  <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">
-    Looking for <p></p>
-  </span>
-  <span className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent animate-glow">
-    Expert Services?
-  </span>
+  <span className="text-gray-600">
+    Looking for Expert Services?
+  </span> 
+  
 </h2>
 
-<style>
-{`
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
-  50% { text-shadow: 0 0 15px rgba(255, 255, 255, 1); }
-  100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.6); }
-}
-.animate-glow {
-  animation: glow 1.5s infinite alternate ease-in-out;
-}
-`}
-</style>
 
 
-<p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed">
-  <strong className="bg-gradient-to-r from-blue-500 via-cyan-400 to-green-400 bg-clip-text text-transparent animate-glow">
+
+<p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed font-normal">
+  <strong className="text-gray-700">
     Fast, Easy & Hassle-Free!
   </strong> 
   <br />
   At 
-  <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent font-semibold font-[sans] animate-glow">
+  <span className="text-purple-500 font-semibold">
     Tax Hummer
   </span>, we go 
-  <span className="bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300 bg-clip-text text-transparent">
+  <span className="text-gray-700">
     beyond software
-  </span> – our expert services ensure smooth and  <p></p>
-  <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent font-semibold font-[sans] animate-glow">
-  stress-free tax compliance.
+  </span> – our expert services ensure smooth and  <a></a>
+  <span className="text-purple-500">
+    stress-free tax compliance.
   </span>
 </p>
 
 
 
-<style>
-{`
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
-  50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); }
-  100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.4); }
-}
-.animate-glow {
-  animation: glow 1.5s infinite alternate ease-in-out;
-}
-`}
-</style>
+
 
 
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 text-left">
           {/* ITR Filing Assistance */}
-          <div className="p-6 sm:p-8 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 rounded-xl shadow-md hover:bg-purple-50">
+          <div className=" bg-white p-6 sm:p-8 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 rounded-xl shadow-md hover:bg-purple-50">
             <div className="flex items-center space-x-3 mb-3 sm:mb-4">
               <img src="itr.webp" alt="ITR Filing" className="w-8 h-8 object-contain" />
               <h3 className="text-2xl sm:text-3xl font-semibold text-purple-800">ITR Filing Assistance</h3>
@@ -124,7 +100,7 @@ const ExpertService = () => {
           File with confidence — <span className="text-pink-500">Let the experts handle it!</span>
         </p>
 
-        <button className="mt-6 sm:mt-8 inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white text-base sm:text-lg font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer" onClick={handleExploreServices}>
+        <button className="mt-6 sm:mt-8 inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white text-base sm:text-lg font-bold py-2 sm:py-3 px-6 sm:px-9  shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer" onClick={handleExploreServices}>
           Explore Our Services <FaArrowRight className="ml-3" />
         </button>
       </div>

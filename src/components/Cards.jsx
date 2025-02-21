@@ -76,7 +76,7 @@ const ServiceCard = ({ imageSrc, title, description, buttonText, hoverContent, i
 
         <button 
           onClick={handleButtonClick}
-          className="absolute bottom-6 left-6 right-6 bg-purple-500 text-white py-3 px-6 rounded-3xl
+          className="absolute bottom-6 left-6 right-6 bg-purple-500 text-white py-3 px-6 
             transition-all duration-300 hover:bg-purple-600 shadow-md"
         >
           {buttonText}
@@ -140,7 +140,7 @@ const ServiceCards = () => {
       ],
     },
     {
-      imageSrc: 'calculator.png',
+      imageSrc: 'calculator.webp',
       title: 'Calculate Tax Liability',
       description: 'Know your Tax liability as per the latest budget 2025 updates.',
       buttonText: 'Calculate Now',

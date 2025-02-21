@@ -45,9 +45,11 @@ const WhyChooseUs = () => {
             <span className="font-semibold text-purple-800 font-sans">
               Voice-Based ITR Filing – 
             </span>{' '}
+            <span className="font-normal">
             Taxes at the Speed of Speech
             Filing Income Tax Returns has never been simpler. With Tax Hummer’s voice-enabled ITR filing, users can effortlessly file their taxes by speaking their details.
             Our advanced AI processes the information, eliminating the need for manual data entry. No forms, no complexities—just seamless tax filing at your convenience.
+            </span>
           </p>
         </div>
 

@@ -19,8 +19,10 @@ const WhyChooseUsAIEnd = () => {
               <span className="font-semibold text-purple-800">
               End-to-End Financial Ecosystem – 
               </span>{' '}
+              <span className="font-normal">
               One Platform, Complete Solutions
               Tax Hummer is more than a tax filing service—it’s a comprehensive financial ecosystem designed to simplify financial operations for individuals and businesses. From tax filing and compliance to banking, inventory management, and financial planning, our platform integrates everything in one place, ensuring convenience and efficiency.
+              </span>
             </p>
           </div>
         </div>

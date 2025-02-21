@@ -22,11 +22,14 @@ const WhoWeAre = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
         >
-          At <span className="font-semibold text-yellow-400 font-sans">Tax Hummer</span>, we are on a mission to simplify finances, save time, 
+          At <span className="font-semibold text-yellow-400 font-sans">Tax Hummer</span>, 
+          <span className="font-normal">
+          we are on a mission to simplify finances, save time, 
           and help millions of Indian businesses and individuals manage their 
           financial lives more efficiently. As a technology-driven company, we 
           create trusted, insightful, and user-friendly platforms that empower 
           our clients to take control of their finances.
+          </span>
         </motion.p>
 
         <motion.p

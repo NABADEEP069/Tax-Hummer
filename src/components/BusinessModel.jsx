@@ -6,7 +6,12 @@ const plans = [
   {
     title1: 'Salary Individual',
     price: '₹999',
-    features: ['Link your PAN', 'Upload Form 16', 'File ITR'],
+    features: [
+      'Link your PAN', 
+      'Upload Form 16', 
+      'File ITR',
+      'Easy to File'
+    ],
     icon: <FaUserTie className="text-purple-500 text-4xl" />,
     color: 'border-purple-500',
   },
@@ -67,7 +72,7 @@ const BusinessModel = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative my-20">
-      <h2 className="text-4xl md:text-5xl font-bold text-center text-purple-700 mb-10">
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-700 mb-10">
         💼 Our Plans
       </h2>
 
@@ -84,85 +89,23 @@ const BusinessModel = () => {
             <div className="flex justify-center mb-4">{plan.icon}</div>
 
 
-            <h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent animate-glow-gold">
+            <h3 className="text-2xl font-semibold text-center ">
   {plan.title1}
-</h3>
-
-<style>
-{`
-@keyframes glow-gold {
-  0% { text-shadow: 0 0 5px rgba(255, 165, 0, 0.4); }
-  50% { text-shadow: 0 0 15px rgba(255, 165, 0, 1); }
-  100% { text-shadow: 0 0 5px rgba(255, 165, 0, 0.4); }
-}
-.animate-glow-gold {
-  animation: glow-gold 1.5s infinite alternate ease-in-out;
-}
-`}
-</style>
-
-
-
-
-<h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent animate-neon">
+          </h3>
+            
+          <h3 className="text-2xl font-semibold text-center ">
   {plan.title2}
-</h3>
+          </h3>
 
-<style>
-{`
-@keyframes neon {
-  0% { text-shadow: 0 0 5px rgba(0, 191, 255, 0.4); }
-  50% { text-shadow: 0 0 15px rgba(0, 191, 255, 1); }
-  100% { text-shadow: 0 0 5px rgba(0, 191, 255, 0.4); }
-}
-.animate-neon {
-  animation: neon 1.5s infinite alternate ease-in-out;
-}
-`}
-</style>
-
-
-
-
-<h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-red-500 to-violet-500 bg-clip-text text-transparent animate-glow-redviolet">
+          <h3 className="text-2xl font-semibold text-center ">
   {plan.title3}
-</h3>
+          </h3>
 
-<style>
-{`
-@keyframes glow-redviolet {
-  0% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); }
-  50% { text-shadow: 0 0 15px rgba(138, 43, 226, 1); }
-  100% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); }
-}
-.animate-glow-redviolet {
-  animation: glow-redviolet 1.5s infinite alternate ease-in-out;
-}
-`}
-</style>
-
-
-
-
-
-
-
-            <h3 className="text-2xl font-semibold text-center bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent animate-glow">
+            <h3 className="text-2xl font-semibold text-center">
   {plan.title4}
-</h3>
+          </h3>
 
-<style>
-{`
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(255, 105, 180, 0.4); }
-  50% { text-shadow: 0 0 15px rgba(255, 105, 180, 0.9); }
-  100% { text-shadow: 0 0 5px rgba(255, 105, 180, 0.4); }
-}
-.animate-glow {
-  animation: glow 1.5s infinite alternate ease-in-out;
-}
-`}
-</style>
+
 
 
 
@@ -178,7 +121,7 @@ const BusinessModel = () => {
               ))}
             </ul>
 
-            <button className="w-full mt-6 bg-purple-600 hover:bg-pink-500 text-white py-2 px-4 rounded-full font-semibold transition-all duration-300">
+            <button className="w-full mt-6 bg-purple-600 hover:bg-pink-500 text-white py-2 px-4  font-semibold transition-all duration-300">
               Choose Plan
             </button>
           </div>

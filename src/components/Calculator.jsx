@@ -350,9 +350,7 @@ const calculateTax = (taxableIncome) => {
         onClick={() => setSelectedRegime("new")}
       >
         New regime
-        {selectedRegime === "new" && (
-          <span className="ml-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-xs ">Recommended</span>
-        )}
+       
       </button>
 
       <button

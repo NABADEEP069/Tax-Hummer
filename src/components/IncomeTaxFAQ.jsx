@@ -94,16 +94,16 @@ const TaxFAQ = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto  bg-[#cbc2c2]  shadow-lg my-7">
+    <div className="w-full my-7">
       {/* Header */}
 
-      <div className="text-center py-6 px-4 border-b border-gray-100">
+      <div className="text-center py-6 px-4 ">
         <h1 className="flex flex-col sm:flex-row items-center justify-center gap-4 text-2xl sm:text-3xl font-bold text-gray-800">
           {/* Image on Top (small screens) & Side (large screens) */}
           <img
             src="faq.webp"
             alt="FAQ"
-            className="w-20 h-20 sm:w-24 sm:h-24 rounded-md "
+            className="w-20 h-20 sm:w-24 sm:h-24"
           />
           Tax FAQ
         </h1>

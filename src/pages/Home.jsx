@@ -5,7 +5,6 @@ import AnimatedBackground from '../components/AnimatedBackground';
 import { Mouse } from 'lucide-react';
 import ExpertService from '../components/ExpertService';
 
-// Lazy Loading Components
 const HeroSection = lazy(() => import('../components/Hero'));
 const Cards = lazy(() => import('../components/Cards'));
 const ProductsForEveryone = lazy(() => import('../components/ProductsForEveryone'));
@@ -16,45 +15,47 @@ const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
+    document.documentElement.style.scrollBehavior = 'smooth';
 
     const handleScroll = () => {
       setShowScroll(window.scrollY > 300);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="relative bg-white min-h-screen overflow-hidden">
-      {/* Animated Background */}
-      {/* <AnimatedBackground /> */}
-
-      {/* Foreground Content */}
       <NavBar />
-      <HeroSection />
+      <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+        <HeroSection />
 
-      <div className="relative py-16 px-4 sm:px-6 md:px-12">
-        <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+        {/* Wrapped in a container with padding */}
+        <div className="relative py-16 px-4 sm:px-6 md:px-12">
           <Cards />
-          <ProductsForEveryone/>
-          <ExpertService/>
-          <IncomeTaxFAQ />
-          
-          <ReadyToGetStarted />
-        </Suspense>
+          <ProductsForEveryone />
+        </div>
 
-        {/* Scroll to Top Button */}
-        {showScroll && (
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-6 right-6 bg-purple-600 text-white p-3  shadow-lg hover:bg-purple-700 transition-all z-50"
-          >
-            <Mouse/>
-          </button>
-        )}
-      </div>
+        {/* ExpertService OUTSIDE the padded container -> full width */}
+        <ExpertService />
+
+        {/* Back to padded container */}
+        <div className="relative py-16 px-4 sm:px-6 md:px-12">
+          <IncomeTaxFAQ />
+          <ReadyToGetStarted />
+        </div>
+      </Suspense>
+
+      {/* Scroll to Top Button */}
+      {showScroll && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-6 bg-purple-600 text-white p-3 shadow-lg hover:bg-purple-700 transition-all z-50"
+        >
+          <Mouse />
+        </button>
+      )}
 
       <Footer />
     </div>

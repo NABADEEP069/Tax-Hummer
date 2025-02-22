@@ -431,6 +431,28 @@ const TaxCalculator = () => {
           >
             Old regime
           </button>
+        <button
+        className={`px-6 py-2 text-lg font-medium transition-colors duration-300 ease-in-out transform rounded-xl ${
+          selectedRegime === "new" 
+            ? "bg-purple-600 text-white border-b-1 border-purple-600"
+            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+        }`}
+        onClick={() => setSelectedRegime("new")}
+      >
+        New regime
+       
+      </button>
+
+      <button
+        className={`px-6 py-2 text-lg font-medium transition-colors duration-300 ease-in-out transform rounded-2xl ${
+          selectedRegime === "old" 
+            ? "bg-purple-600 text-white border-b-2 border-purple-600"
+            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+        }`}
+        onClick={() => setSelectedRegime("old")}
+      >
+        Old regime
+      </button>
         </div>
       </div>
 

@@ -4,54 +4,36 @@ import AnimatedBackground from './AnimatedBackground';
 import { useNavigate } from 'react-router-dom';
 
 const ExpertService = () => {
-  const navigate=useNavigate();
-  const handleExploreServices=()=>{
+  const navigate = useNavigate();
+  const handleExploreServices = () => {
     navigate('/plans');
-  }
+  };
+
   return (
-    <div className="relative py-16 sm:px-6 md:px-12 overflow-hidden">
+    <div className="relative py-16 overflow-hidden">
       <AnimatedBackground />
 
-      <div className="min-h-screen w-full  p-6 sm:p-8 md:p-12 text-center bg-[#f5f5f5]">
+      <div className="min-h-screen w-full text-center">
         {/* Header */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal mb-6 sm:mb-8 leading-tight relative">
-  <FaRegLightbulb className="inline-block text-pink-500 mr-3 font-[sans] animate-pulse" />
-  <span className="text-gray-600">
-    Looking for Expert Services?
-  </span> 
-  
-</h2>
+          <FaRegLightbulb className="inline-block text-pink-500 mr-3 font-[sans] animate-pulse" />
+          <span className="text-gray-600">
+            Looking for Expert Services?
+          </span>
+        </h2>
 
-
-
-
-<p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed font-normal">
-  <strong className="text-gray-700">
-    Fast, Easy & Hassle-Free!
-  </strong> 
-  <br />
-  At 
-  <span className="text-purple-500 font-semibold">
-    Tax Hummer
-  </span>, we go 
-  <span className="text-gray-700">
-    beyond software
-  </span> – our expert services ensure smooth and  <a></a>
-  <span className="text-purple-500">
-    stress-free tax compliance.
-  </span>
-</p>
-
-
-
-
-
-
+        <p className="text-base sm:text-lg text-gray-700 mb-8 sm:mb-10 leading-relaxed font-normal">
+          <strong className="text-gray-700">Fast, Easy & Hassle-Free!</strong>
+          <br />
+          At <span className="text-purple-500 font-semibold">Tax Hummer</span>, we go 
+          <span className="text-gray-700"> beyond software</span> – our expert services ensure smooth and&nbsp;
+          <span className="text-purple-500">stress-free tax compliance.</span>
+        </p>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 text-left">
           {/* ITR Filing Assistance */}
-          <div className=" bg-white p-6 sm:p-8 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 rounded-xl shadow-md hover:bg-purple-50">
+          <div className="bg-white p-6 sm:p-8 border-l-4 border-purple-500 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 rounded-xl shadow-md hover:bg-purple-50">
             <div className="flex items-center space-x-3 mb-3 sm:mb-4">
               <img src="itr.webp" alt="ITR Filing" className="w-8 h-8 object-contain" />
               <h3 className="text-2xl sm:text-3xl font-semibold text-purple-800">ITR Filing Assistance</h3>
@@ -100,7 +82,10 @@ const ExpertService = () => {
           File with confidence — <span className="text-pink-500">Let the experts handle it!</span>
         </p>
 
-        <button className="mt-6 sm:mt-8 inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white text-base sm:text-lg font-bold py-2 sm:py-3 px-6 sm:px-9  shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer" onClick={handleExploreServices}>
+        <button
+          className="mt-6 sm:mt-8 inline-flex items-center justify-center bg-purple-600 hover:bg-purple-500 text-white text-base sm:text-lg font-bold py-2 sm:py-3 px-6 sm:px-9 shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer"
+          onClick={handleExploreServices}
+        >
           Explore Our Services <FaArrowRight className="ml-3" />
         </button>
       </div>

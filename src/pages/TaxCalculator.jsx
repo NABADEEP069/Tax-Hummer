@@ -3,11 +3,33 @@ import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CalculatorComponent from "../components/Calculator";
 import CalculatorContent from "../components/CalculatorContent";
+import { useEffect, useState } from "react";
 
 function TaxCalculator() {
+  const [navBarColor, setNavBarColor] = useState("white");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setNavBarColor("purple");
+      } else {
+        setNavBarColor("white");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
-      <NavBar />
+      <NavBar style={{ backgroundColor: navBarColor }} />
+      <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-purple-700 mb-4 text-center sm:text-left"></h2>
+      </div>
 
       <div className="relative w-full">
         <img
@@ -41,12 +63,11 @@ function TaxCalculator() {
           <span className="text-gray-900">INCOME TAX CALCULATOR - FY 2025-2026</span>
         </p>
       </nav>
-
-      {/* Update Notice */}
+  
+        {/* Update Notice */}
       <div className="flex flex-col sm:flex-row items-center justify-center mb-6 sm:mb-8 px-4 text-center animate-pulse">
-        
         <span className="mt-2 sm:mt-0 sm:ml-4 rounded-full bg-orange-100 px-3 py-1 text-xs sm:text-sm font-semibold text-orange-700 shadow-lg animate-bounce">
-        Updated as per the  Latest Budget on <strong>1st Feb, 2025</strong>.
+          Updated as per the Latest Budget on <strong>1st Feb, 2025</strong>.
         </span>
       </div>
 
